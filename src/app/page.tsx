@@ -1,10 +1,15 @@
-import Image from 'next/image'
-
-export default function Home() {
+const Home = () => {
   return (
-    <main className="min-h-screen flex justify-center items-center">
-      <h1 className="text-8xl font-bold text-slate-900">UrNotes</h1>
-      <span className="mt-12">by Al Siam</span>
+    <main>
+      <div className="max-w-[90%] mx-auto py-3">
+        <h2 className="text-2xl font-bold tracking-tight">
+          Welcome to UrNotes
+        </h2>
+        <p className="text-muted-foreground">
+          Simplify your task management with ease and efficiency.
+        </p>
+      </div>
     </main>
-  )
-}
+  );
+};
+export default Home;
