@@ -15,7 +15,7 @@ export default function TaskPage() {
         <div className="flex items-center justify-between space-y-2">
           <div>
             <h2 className="text-2xl font-bold tracking-tight">
-              Welcome to UrNotes
+              Welcome to iTasks
             </h2>
             <p className="text-muted-foreground">
               Simplify your task management with ease and efficiency.

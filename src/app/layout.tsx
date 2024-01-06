@@ -10,9 +10,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title:
-    "UrNotes - Streamlining Task Management, Challenges, and Time Management",
+    "iTasks - Streamlining Task Management, Challenges, and Time Management",
   description:
-    "Elevate your productivity with UrNotes — simplifying task management with seamless efficiency and mastering your time effectively.",
+    "Elevate your productivity with iTasks — simplifying task management with seamless efficiency and mastering your time effectively.",
   creator: "Al Siam",
   manifest: "/site.webmanifest"
 };
