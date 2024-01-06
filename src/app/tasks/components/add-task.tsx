@@ -28,17 +28,17 @@ import { useTask } from "@/context/task-context";
 import { labels, priorities, statuses } from "../data/data";
 
 const FormSchema = z.object({
-  label: z.string().min(2, {
-    message: "Label must be at least 2 characters.",
-  }),
   title: z.string().min(2, {
-    message: "Title must be at least 2 characters.",
+    message: "Write task title (ex: SEO update) ",
+  }),
+  label: z.string().min(2, {
+    message: "Select Label (ex: bug)",
   }),
   status: z.string().min(2, {
-    message: "Status must be at least 2 characters.",
+    message: "Task Status (ex: todo)",
   }),
   priority: z.string().min(2, {
-    message: "Priority must be at least 2 characters.",
+    message: "Task Priority (ex: high)",
   }),
 });
 
@@ -71,14 +71,13 @@ export function AddTask() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex gap-10 justify-end items-end"
+        className="block p-3 md:flex gap-2 md:gap-10 justify-end items-end"
       >
         <FormField
           control={form.control}
           name="title"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Title</FormLabel>
               <FormControl>
                 <Input placeholder="Task title" {...field} />
               </FormControl>
@@ -91,7 +90,6 @@ export function AddTask() {
           name="label"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Label</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger>
@@ -116,7 +114,6 @@ export function AddTask() {
           name="status"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Status</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger>
@@ -142,7 +139,6 @@ export function AddTask() {
           name="priority"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Priority</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger>
@@ -150,7 +146,6 @@ export function AddTask() {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  {/* <SelectLabel>Status</SelectLabel> */}
                   {priorities.map((priority: any, index: number) => (
                     <SelectItem key={index} value={priority.value}>
                       <div className="flex justify-center items-center gap-3">
@@ -165,7 +160,7 @@ export function AddTask() {
           )}
         />
 
-        <Button type="submit">Submit</Button>
+        <Button type="submit">Add Task</Button>
       </form>
     </Form>
   );

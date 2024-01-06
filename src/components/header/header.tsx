@@ -4,7 +4,7 @@ import { ThemeSwitch } from "../theme/theme-switch";
 const Header = () => {
   return (
     <header className="bg-background border-b text-foreground py-2">
-      <div className="max-w-[90%] mx-auto">
+      <div className="max-w-screen-xl mx-auto">
         <div className="flex justify-between items-center">
           <div>
             <Link
@@ -16,7 +16,9 @@ const Header = () => {
           </div>
           <nav>
             <ul>
-              <li><Link href="/tasks">Tasks</Link></li>
+              <li>
+                <Link href="/tasks">Tasks</Link>
+              </li>
             </ul>
           </nav>
           <ThemeSwitch />
