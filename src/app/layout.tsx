@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   description:
     "Elevate your productivity with iTasks — simplifying task management with seamless efficiency and mastering your time effectively.",
   creator: "Al Siam",
-  manifest: "/site.webmanifest"
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -29,6 +30,7 @@ export default function RootLayout({
           <Header />
           {children}
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
