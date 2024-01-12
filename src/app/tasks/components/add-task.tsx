@@ -23,7 +23,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import Link from "next/link";
 import { useTask } from "@/context/task-context";
 import { labels, priorities, statuses } from "../data/data";
 
