@@ -1,5 +1,6 @@
 import {
   ArrowDownIcon,
+  ArrowLeftIcon,
   ArrowRightIcon,
   ArrowUpIcon,
   CheckCircledIcon,
@@ -7,7 +8,7 @@ import {
   CrossCircledIcon,
   QuestionMarkCircledIcon,
   StopwatchIcon,
-} from "@radix-ui/react-icons"
+} from "@radix-ui/react-icons";
 
 export const labels = [
   {
@@ -22,7 +23,7 @@ export const labels = [
     value: "documentation",
     label: "Documentation",
   },
-]
+];
 
 export const statuses = [
   {
@@ -50,22 +51,27 @@ export const statuses = [
     label: "Canceled",
     icon: CrossCircledIcon,
   },
-]
+];
 
 export const priorities = [
   {
-    label: "Low",
-    value: "low",
-    icon: ArrowDownIcon,
+    label: "Urgent",
+    value: "urgent",
+    icon: ArrowUpIcon,
   },
   {
-    label: "Medium",
-    value: "medium",
+    label: "Not Urgent",
+    value: "not-urgent",
+    icon: ArrowLeftIcon,
+  },
+  {
+    label: "Important",
+    value: "important",
     icon: ArrowRightIcon,
   },
   {
-    label: "High",
-    value: "high",
-    icon: ArrowUpIcon,
+    label: "Not Important",
+    value: "not-important",
+    icon: ArrowDownIcon,
   },
-]
+];

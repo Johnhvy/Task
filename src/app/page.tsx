@@ -1,4 +1,4 @@
-import Tasks from "./tasks/tasks";
+import Box from "@/components/box/box";
 
 const Home = () => {
   return (
@@ -10,7 +10,7 @@ const Home = () => {
         </p>
       </div>
       <div className="max-w-screen-xl mx-auto">
-        <Tasks />
+        <Box />
       </div>
     </main>
   );
