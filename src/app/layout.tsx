@@ -1,5 +1,5 @@
 import { Analytics } from "@vercel/analytics/react";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 
 // Domestic imports
@@ -14,8 +14,22 @@ export const metadata: Metadata = {
     "iTasks - Streamlining Task Management, Challenges, and Time Management",
   description:
     "Elevate your productivity with iTasks — simplifying task management with seamless efficiency and mastering your time effectively.",
-  creator: "Al Siam",
-  manifest: "/site.webmanifest",
+  authors: [
+    { name: "Al Siam" },
+    {
+      name: "Al Siam",
+      url: "https://www.x.com/_alsiam/",
+    },
+  ],
+  icons: [
+    { rel: "apple-touch-icon", url: "/icons/icon-192x192.png" },
+    { rel: "icon", url: "/icons/icon-192x192.png" },
+    { rel: "favicon", url: "/icons/favicon.ico" },
+  ],
+};
+
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({
